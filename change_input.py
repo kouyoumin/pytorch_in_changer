@@ -4,7 +4,7 @@ import torch.nn as nn
 def change_first_conv_in_channels(model, new_in_channels=1):
     for n, m in model.named_modules():
         if isinstance(m, nn.modules.conv._ConvNd):
-            print('Found first conv layer (%s) to: %s' % (n, m))
+            print('Found first conv layer (%s): %s' % (n, m))
             if m.in_channels != new_in_channels:
                 # Get objects hierarchically
                 hiers = n.split('.')
