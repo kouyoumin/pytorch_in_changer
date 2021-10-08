@@ -4,3 +4,6 @@ Finds first conv layer in the model and change in_channels as you need. Useful t
 ## Highlights:
 - Reduces computation when you have grayscale input.
 - Output is (almost) equivalent to original model (when channel copy applied to grayscale data).
+
+## Limitations:
+- Does not work with Inception3 because its transform_input always transform images into 3-channel.
